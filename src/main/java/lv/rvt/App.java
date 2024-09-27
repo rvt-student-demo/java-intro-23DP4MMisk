@@ -29,23 +29,32 @@ public class App
         // Saņema  no lietotaja boolean vērtību
        // boolean trueOrFalse = Boolean.valueOf(scanner.nextLine());
 
-        System.out.println("Give the first number:");
-        int userInput1 = Integer.valueOf(scanner.nextLine());
-        System.out.println("Give the second number:");
-        int userInput2 = Integer.valueOf(scanner.nextLine());
+        System.out.println("Give speed:");
+
+        int number2 = Integer.valueOf(scanner.nextLine());
+        if (number2 > 120) {
+         System.out.println("Speeding ticket!");
+      }
+
+        
+       // System.out.println("Give the second number:");
+       // int userInput2 = Integer.valueOf(scanner.nextLine());
        
 
-        int result1 = userInput1 + userInput2;
-        System.out.println(userInput1 + " + " + userInput2 + " = " +result1);
+       // int result1 = userInput1 + userInput2;
+       // System.out.println(userInput1 + " + " + userInput2 + " = " +result1);
 
-        int result2 = userInput1 - userInput2;
-        System.out.println(userInput1 + " - " + userInput2 + " = " + result2);
+       // int result2 = userInput1 - userInput2;
+       // System.out.println(userInput1 + " - " + userInput2 + " = " + result2);
 
-        int result3 = userInput1 * userInput2;
-        System.out.println(userInput1 + " * " + userInput2 + " = " + result3);
+       // int result3 = userInput1 * userInput2;
+       // System.out.println(userInput1 + " * " + userInput2 + " = " + result3);
 
-        double result4 = userInput1 / userInput2;
-        System.out.println(userInput1 + " / " + userInput2 + " = " + result4);
+       // double result4 = userInput1 / userInput2;
+       // System.out.println(userInput1 + " / " + userInput2 + " = " + result4);
+
+     
+      
 
     }
 }
