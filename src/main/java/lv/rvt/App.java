@@ -12,49 +12,35 @@ public class App
         System.out.println("Hello world");
         Scanner scanner = new Scanner(System.in);
 
-       // String valueAsString = "42";
-       // int value = Integer.valueOf(valueAsString);
+      //int age = 15;
 
-        // System.out.println(value + 20);
-
-       // int userInput = Integer.valueOf(scanner.nextLine());
-        // System.out.println(userInput);
-
-        // Saņemam no lietotaja string vērtību
-       // String text = scanner.nextLine();
-        // Saņemam no lietotaja int vērtību
-        // int integer = Integer.valueOf(scanner.nextLine());
-        // Saņemam no lietotaja dooble vērtību
-       // double floatingPoint = Double.valueOf(scanner.nextLine());
-        // Saņema  no lietotaja boolean vērtību
-       // boolean trueOrFalse = Boolean.valueOf(scanner.nextLine());
-
-        System.out.println("Give speed:");
-
-        int number2 = Integer.valueOf(scanner.nextLine());
-        if (number2 > 120) {
-         System.out.println("Speeding ticket!");
-      }
-
-        
-       // System.out.println("Give the second number:");
-       // int userInput2 = Integer.valueOf(scanner.nextLine());
-       
-
-       // int result1 = userInput1 + userInput2;
-       // System.out.println(userInput1 + " + " + userInput2 + " = " +result1);
-
-       // int result2 = userInput1 - userInput2;
-       // System.out.println(userInput1 + " - " + userInput2 + " = " + result2);
-
-       // int result3 = userInput1 * userInput2;
-       // System.out.println(userInput1 + " * " + userInput2 + " = " + result3);
-
-       // double result4 = userInput1 / userInput2;
-       // System.out.println(userInput1 + " / " + userInput2 + " = " + result4);
-
-     
+       // if (age >= 15) {
+        // System.out.println("Pilngadigs");
+      // } else if (age == 7) {
+        // System.out.println("Tu esi pirmklasnieks");
+      // }
       
+      System.out.println("Give points [0-100]");
+
+      int points = Integer.valueOf(scanner.nextLine());
+
+      if (points < 0) {
+        System.out.println("Grade: impossible!");
+      } else if (points > 0 && points <= 49) {
+        System.out.println("Grade: failed");
+      } else if (points >= 50 && points <= 59) {
+        System.err.println("Grade: 1");
+      } else if (points >= 60 && points <= 69) {
+        System.out.println("Grade: 2");
+      } else if (points >= 70 && points <= 79) {
+        System.out.println("Grade: 3");
+      } else if (points >= 80 && points <= 89) {
+        System.out.println("Grade: 4");
+      } else if (points >= 90 && points <= 100) {
+        System.out.println("Grade: 5");
+      } else {
+        System.out.println("Grade: incredible!");
+      }
 
     }
 }
