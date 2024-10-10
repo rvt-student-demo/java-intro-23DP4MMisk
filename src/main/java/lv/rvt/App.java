@@ -24,16 +24,11 @@ public class App
        break;
       }
      
-      if (number > 0) {
+      if (number > 0 || number < 0) {
        skaits = skaits + 1;
        summ = summ + number;
       }
    
-      if (number < 0) {
-       skaits = skaits + 1;
-       summ = summ + number;
-      } 
-
     
      
     }
