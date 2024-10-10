@@ -11,34 +11,17 @@ public class App
     // Ctrl + /
     System.out.println("Hello world");
     Scanner scanner = new Scanner(System.in);
-    int skaits = 0;
-    int summ = 0;
-   
-
-    while (true) {
-      
-      System.out.println("Give a number");
-      int number = Integer.valueOf(scanner.nextLine());
-
-      if (number == 0) {
-       break;
-      }
-     
-      if (number > 0 || number < 0) {
-       skaits = skaits + 1;
-       summ = summ + number;
-      }
-   
+    System.out.println("Give a number: " );
     
-     
+    int num = Integer.valueOf(scanner.nextLine());
+    int factorial = 1;
+    for (int i = 1; i <= num; i++){
+      factorial *= i;
     }
     
-    if (skaits != 0) {
-     
-      System.out.println("Number of numbers: " + skaits);
-      System.out.println("Sum of the numbers: " + summ);
-    }
-   
+    System.out.println("Factorial: " + factorial);
+  
+  
   }
 
       
