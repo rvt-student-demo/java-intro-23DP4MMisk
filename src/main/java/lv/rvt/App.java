@@ -10,30 +10,49 @@ public class App
 
     // Ctrl + /
    // System.out.println("Hello world");
-    Scanner scanner = new Scanner(System.in);
+   // FACTORIAL
    // System.out.print("Give a number: " );
-    
-    //int num = Integer.valueOf(scanner.nextLine());
+   //int num = Integer.valueOf(scanner.nextLine());
     //int factorial = 1;
     //for (int i = 1; i <= num; i++){
     //  factorial *= i;
     //}
-    
     //System.out.println("Factorial: " + factorial);
+    // uzd from where to where (2 parts) - 2 variants
+    //int sk = num2;
+    // while(sk <= num){
+      //System.out.println(sk);
+      //sk++;
+    //}
+    //while(sk >= num){
+      //break;
+    //}
+   
+   
+    Scanner scanner = new Scanner(System.in);
+   
 
-    System.out.println("How many times? ");
+    System.out.print("Where to?");
     int num = Integer.valueOf(scanner.nextLine());
-    int sk = 0;
-    for(sk = 0; sk < num; sk++) {
-      printText();
+   
+    System.out.print("Where from?");
+    int num2 = Integer.valueOf(scanner.nextLine());
+    
+    for(int sk = num2; sk <= num; sk++) {
+      System.out.println(sk);
     }
+
+    for(int sk2 = num2; sk2 >= num;) {
+      break;
+    }
+    
+    
+   
    
 
   }
 
-  public static void printText() {
-    System.out.println("In a hole in the ground there lived a method");
-  }
+  
 
 }  
 
