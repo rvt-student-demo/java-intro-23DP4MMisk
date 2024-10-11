@@ -21,50 +21,19 @@ public class App
     
     //System.out.println("Factorial: " + factorial);
 
-    System.out.println("Give a number");
-    int sum = 0;
+    System.out.println("How many times? ");
+    int num = Integer.valueOf(scanner.nextLine());
     int sk = 0;
-    double average = 0;
-    int even = 0;
-    int odd = 0;
-
-
-    while(true) {
-      
-      int num = Integer.valueOf(scanner.nextLine());
-      
-
-
-      if(num == -1){
-       break;
-         
-      }
-
-      if(sk % 2 != 0){
-        odd ++;
-      }
-      
-      if (sk % 2 == 0){
-        even ++;
-      }
-     
-      sum += num;
-      sk ++;
-      average = sum / sk;
-     
-     
+    for(sk = 0; sk < num; sk++) {
+      printText();
     }
-
-    System.out.println("Thx!Bye!");
-    System.out.println("Sum:" + sum);
-    System.out.println("Numbers: " + sk);
-    System.out.println("Average: " + average);
-    System.out.println("Even: " + even);
-    System.out.println("Odd:" + odd);
+   
 
   }
 
-      
+  public static void printText() {
+    System.out.println("In a hole in the ground there lived a method");
+  }
 
 }  
 
