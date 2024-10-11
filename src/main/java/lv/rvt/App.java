@@ -41,15 +41,15 @@ public class App
       }
 
       if(sk % 2 != 0){
-        odd = odd + 1;
+        odd ++;
       }
       
       if (sk % 2 == 0){
-        even = even + 1;
+        even ++;
       }
      
       sum += num;
-      sk = sk + 1;
+      sk ++;
       average = sum / sk;
      
      
