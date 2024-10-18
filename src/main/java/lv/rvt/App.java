@@ -9,17 +9,20 @@ public class App
   public static void main( String[] args ){
    
     Scanner scanner = new Scanner(System.in);
-    printStars(5);
-    printStars(3);
-    printStars(9);
+    printSquare(4);
     
   }
   
-  public static void printStars(int number) {
-    for(int i = 0; i < number; i++){
-      System.out.print("*");
+  public static void printSquare(int size) {
+    for(int i = 0; i < size; i++){
+      for(int k = 0; k < size; k++){
+        System.out.print("*");
+      }
+      System.out.println("");
+
     }
-    System.out.println("");
+
+    
   }
 
     
