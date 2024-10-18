@@ -9,19 +9,21 @@ public class App
   public static void main( String[] args ){
    
     Scanner scanner = new Scanner(System.in);
-    
-    divisibleByThreeInRange(2, 10);
+    printStars(5);
+    printStars(3);
+    printStars(9);
     
   }
-    
-    
-  public static void  divisibleByThreeInRange(int start, int end) {
-    for(int i = start; i <= end; i++){
-      if (i % 3 == 0) {
-        System.out.println(i);
-      }
+  
+  public static void printStars(int number) {
+    for(int i = 0; i < number; i++){
+      System.out.print("*");
     }
+    System.out.println("");
   }
+
+    
+  
 
   
 } 
