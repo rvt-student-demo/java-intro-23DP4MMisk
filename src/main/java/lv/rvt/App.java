@@ -11,24 +11,22 @@ public class App
     Scanner scanner = new Scanner(System.in);
     printTriangle(4);
     
-    
   }
   
   public static void printTriangle(int size) {
-    for(int i = 0; i < size; i++){
+    for(int i = 1; i < size; i++){
+      System.out.println("*");
       printStars(i);
     }
-    
-    
-
-
-     
-    
 
     
   }
 
-  
+  public static void printStars(int size){
+    for(int j = 1; j <= size; j++){
+      System.out.print("*");
+    }
+  }
 
     
   
