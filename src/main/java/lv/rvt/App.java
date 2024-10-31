@@ -20,23 +20,19 @@ public class App
 
    // System.out.println("Sum of all numbers = " + sum);
 
-    int[] val = {13, -4, 82, 17}; 
-    int[] twice;
-    twice = new int[val.length];
-
-    for(int i = 0; i < val.length; i++){
-      twice[i] = val[i] * 2;
-    }
-    
-    System.out.println( "Original Array: " 
-        + val[0] + " " + val[1] + " " + val[2] + " " + val[3] );
- 
-    
+   int[] valA  = { 13, -22,  82,  17}; 
+   int[] valB  = {-12,  24, -79, -13};
+   int[] sumC  = {  0,   0,   0,   0};
+   
+   for(int i = 0; i < sumC.length; i++) {
+     sumC[i] = valA[i] + valB[i];
+   }
 
 
- 
-    System.out.println( "New Array: " 
-        + twice[0] + " " + twice[1] + " " + twice[2] + " " + twice[3] );
+
+
+   System.out.println( "sum: " 
+       + sumC[0] + " " + sumC[1] + " " + sumC[2] + " " + sumC[3] );
 
     
   }
