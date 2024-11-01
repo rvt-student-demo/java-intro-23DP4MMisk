@@ -2,13 +2,11 @@ package lv.rvt;
 
 import java.util.*;
 
-public class App 
-{
-  
-  
-  public static void main( String[] args ){
+public class App  
+{ 
+   public static void main( String[] args ){
    // int[] val = {0, 1, 2, 3}; 
-    int sum = 0;
+   // int sum = 0;
     // Uzzināt elementu skaitu masīva ?
     //for(int i = 0; i < val.length; i++){
       //System.out.println(val[i]);
@@ -20,27 +18,31 @@ public class App
 
    // System.out.println("Sum of all numbers = " + sum);
 
-   int[] valA  = { 13, -22,  82,  17}; 
-   int[] valB  = {-12,  24, -79, -13};
-   int[] sumC  = {  0,   0,   0,   0};
    
-   for(int i = 0; i < sumC.length; i++) {
-     sumC[i] = valA[i] + valB[i];
-   }
+    int[] valA   = { 13, -22,  82,  17}; 
+    int[] valB   = {  0,   0,   0,   0};
+    
+    // Put values into valB so that the sum of the values
+    // in corresponding cells of valA and valB is 25.
 
+    for(int i = 0; i < valB.length; i++){
+      valB[i] =  25 - valA[i];
+    }
 
+ 
+ 
+    System.out.println( "valA: " 
+        + valA[0] + " " + valA[1] + " " + valA[2] + " " + valA[3] );
+ 
+    System.out.println( "valB: " 
+        + valB[0] + " " + valB[1] + " " + valB[2] + " " + valB[3] );
 
-
-   System.out.println( "sum: " 
-       + sumC[0] + " " + sumC[1] + " " + sumC[2] + " " + sumC[3] );
+    System.out.println( "sum:  " 
+        + (valA[0]+valB[0]) + " " + (valA[1]+valB[1]) + " " 
+        + (valA[2]+valB[2]) + " " + (valA[3]+valB[3]) );
 
     
   }
-  
- 
-
-  
-
   
 } 
 
