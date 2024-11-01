@@ -5,41 +5,25 @@ import java.util.*;
 public class App  
 { 
    public static void main( String[] args ){
-   // int[] val = {0, 1, 2, 3}; 
-   // int sum = 0;
-    // Uzzināt elementu skaitu masīva ?
-    //for(int i = 0; i < val.length; i++){
-      //System.out.println(val[i]);
-   // }
-    
-   // for (int num = 0; num < val.length; num++) {
-     // sum += val[num];
-    //}
+    int[] val = {0, 1, 2, 3};
+    int temp;
 
-   // System.out.println("Sum of all numbers = " + sum);
-
-   
-    int[] valA   = { 13, -22,  82,  17}; 
-    int[] valB   = {  0,   0,   0,   0};
-    
-    // Put values into valB so that the sum of the values
-    // in corresponding cells of valA and valB is 25.
-
-    for(int i = 0; i < valB.length; i++){
-      valB[i] =  25 - valA[i];
+    for(int i = 0; i < val.length / 2; i++){
+      temp = val[i];
+      val[i] = val[val.length - 1 - i];
+      val[val.length - 1 - i]  =  temp;
     }
-
- 
- 
-    System.out.println( "valA: " 
-        + valA[0] + " " + valA[1] + " " + valA[2] + " " + valA[3] );
- 
-    System.out.println( "valB: " 
-        + valB[0] + " " + valB[1] + " " + valB[2] + " " + valB[3] );
-
-    System.out.println( "sum:  " 
-        + (valA[0]+valB[0]) + " " + (valA[1]+valB[1]) + " " 
-        + (valA[2]+valB[2]) + " " + (valA[3]+valB[3]) );
+    
+    
+    System.out.println( "Original Array: " 
+    + val[0] + " " + val[1] + " " + val[2] + " " + val[3] );
+    
+    System.out.println( "Reversed Array: " 
+        + val[0] + " " + val[1] + " " + val[2] + " " + val[3] );
+    
+    
+    
+   
 
     
   }
