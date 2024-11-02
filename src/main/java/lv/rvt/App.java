@@ -5,27 +5,31 @@ import java.util.*;
 public class App  
 { 
    public static void main( String[] args ){
-    int[] val = {0, 1, 2, 3};
-    int temp;
+    Scanner scanner = new Scanner(System.in);
+    double sum = 0.0; 
+    int count = 0;
+    String longestName = "";
+     
+    while (true) {
+      String input = scanner.nextLine();
+      if (input.equals("")) {
+        break;
+      }
 
-    System.out.println( "Original Array: " 
-    + val[0] + " " + val[1] + " " + val[2] + " " + val[3] );
+      String [] parts = input.split((","));
+      sum = sum + Integer.valueOf(parts[1]);
+      String name = parts[0];
+      count = count + 1;
+      
+      if (name.length() > longestName.length()) {
+        longestName = name;
+      }
     
-    for(int i = 0; i < val.length / 2; i++){
-      temp = val[i];
-      val[i] = val[val.length - 1 - i];
-      val[val.length - 1 - i]  =  temp;
     }
     
+    System.out.println("Longest name: " + longestName);
+    System.out.println("Average of the birth years: " + (sum / count));
     
-   
-    System.out.println( "Reversed Array: " 
-        + val[0] + " " + val[1] + " " + val[2] + " " + val[3] );
-    
-    
-    
-   
-
     
   }
   
