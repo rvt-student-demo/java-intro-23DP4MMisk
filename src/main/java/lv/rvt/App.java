@@ -6,32 +6,26 @@ public class App
 { 
    public static void main( String[] args ){
     Scanner scanner = new Scanner(System.in);
-    double sum = 0.0; 
-    int count = 0;
-    String longestName = "";
-     
-    while (true) {
-      String input = scanner.nextLine();
-      if (input.equals("")) {
-        break;
-      }
+    
+    Account artosAccount = new Account("Arto's account", 100.00);
+    Account artosSwissAccount = new Account("Arto's account in Switzerland", 1000000.00);
 
-      String [] parts = input.split((","));
-      sum = sum + Integer.valueOf(parts[1]);
-      String name = parts[0];
-      count = count + 1;
-      
-      if (name.length() > longestName.length()) {
-        longestName = name;
-      }
-    
-    }
-    
-    System.out.println("Longest name: " + longestName);
-    System.out.println("Average of the birth years: " + (sum / count));
-    
+    System.out.println("Initial state");
+    System.out.println(artosAccount);
+    System.out.println(artosSwissAccount);
+
+    artosAccount.withdraw(20);
+    System.out.println("The balance of Arto's account is now: " + artosAccount.balance());
+    artosSwissAccount.deposit(200);
+    System.out.println("The balance of Arto's other account is now: " + artosSwissAccount.balance());
+
+    System.out.println("End state");
+    System.out.println(artosAccount);
+    System.out.println(artosSwissAccount);
     
   }
+
+ 
   
 } 
 
