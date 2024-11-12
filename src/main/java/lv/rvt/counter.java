@@ -12,7 +12,16 @@ public class counter {
     }
 
     public void decrement(){
-        this.value = this.value - 1;
+        
+        if (this.value > 0){
+            this.value = this.value - 1;
+            
+        }
+
+    }
+
+    public void reset(){
+        this.value = 0;
     }
  
  
