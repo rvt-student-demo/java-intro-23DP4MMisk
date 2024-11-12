@@ -6,8 +6,14 @@ public class App
 { 
    public static void main( String[] args ){
     Scanner scanner = new Scanner(System.in);
-    Product banana = new Product("Banana");
-    banana.printProduct();
+    counter counter = new counter(10);
+    counter.printValue();
+
+    counter.decrement();
+    counter.printValue();
+
+    counter.decrement();
+    counter.printValue();
     
     
   }
