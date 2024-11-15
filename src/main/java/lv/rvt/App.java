@@ -4,27 +4,40 @@ import java.util.*;
 
 public class App  
 { 
-   public static void main( String[] args ){
-    Scanner scanner = new Scanner(System.in);
+  public static void main( String[] args ){
+   Scanner scanner = new Scanner(System.in);
     
     
-    paymentcard card = new paymentcard(50);
-    System.out.println(card);
+   paymentcard paulsCard = new paymentcard(20);
+   paymentcard mattsCard = new paymentcard(30);
+
+        
+    paulsCard.eatHeartily();
+       
+    mattsCard.eatAffordably();
+
+        
+    System.out.println("Paul: " + paulsCard);
+    System.out.println("Matt: " + mattsCard);
+
+       
+    paulsCard.addMoney(20);
+    mattsCard.eatHeartily();
+
+        
+    System.out.println("Paul: " + paulsCard);
+    System.out.println("Matt: " + mattsCard);
+
+        
+    paulsCard.eatAffordably();
+    paulsCard.eatAffordably();
+        
+    mattsCard.addMoney(50);
+
+        
+    System.out.println("Paul: " + paulsCard);
+    System.out.println("Matt: " + mattsCard);
     
-
-    card.eatAffordably();
-    System.out.println(card);
-
-    card.eatHeartily();
-    card.eatAffordably();
-    System.out.println(card);
-
-    //card.eatHeartily();
-    //System.out.println(card);
-
-    //card.eatHeartily();
-   // System.out.println(card);
-
 
 
   }
