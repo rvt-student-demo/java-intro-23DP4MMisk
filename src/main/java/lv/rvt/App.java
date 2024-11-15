@@ -6,28 +6,35 @@ public class App
 { 
    public static void main( String[] args ){
     Scanner scanner = new Scanner(System.in);
-    counter counter = new counter(2);
-    counter counter2 = new counter(100);
-
-    counter.printValue();
-
-    counter.decrement();
-    counter.printValue();
-
-    counter.decrement();
-    counter.printValue();
-
-    counter.decrement();
-    counter.printValue();
+    
+    stastistic statistics = new stastistic();
+    stastistic stastistic2 = new stastistic();
+    System.out.println("Enter numbers: ");
+    while(true){
+      int number = Integer.valueOf(scanner.nextLine());
+      if(number == -1){
+        break;
+      }
+      stastistic2.addNumber(number);
+    }
+    
+    
+    
     System.out.println();
+    statistics.addNumber(3);
+    statistics.addNumber(5);
+    statistics.addNumber(1);
+    statistics.addNumber(2);
+    System.out.println("Count: " + statistics.getCount());
+    System.out.println("Sum: " + statistics.sum());
+    System.out.println("Average: " + statistics.average());
+    System.out.println();
+    System.out.println("Sum: " + stastistic2.sum());
+    System.out.println("Sum of even numbers: " + stastistic2.even());
+    System.out.println("Sum of odd numbers: " +  stastistic2.odd());
 
-    counter2.printValue();
 
-    counter2.reset();
-    counter2.printValue();
 
-    counter2.decrement();
-    counter2.printValue();
   }
   
 } 
