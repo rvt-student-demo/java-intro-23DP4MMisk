@@ -6,24 +6,18 @@ public class App
 { 
   public static void main( String[] args ){
     Scanner scanner = new Scanner(System.in);
-    
-    
-    
-    
-    
-    Timer timer = new Timer();
+    Person paul = new Person("Paul", 24);
+    Person ada = new Person("Ada");
 
-    while (true) {
-        System.out.println(timer);
-        timer.advance();
+    System.out.println(paul);
+    System.out.println(ada);
     
-        try {
-            Thread.sleep(10);
-        } catch (Exception e) {
-           System.out.println("Error" + e.getMessage());
-        }
-    }
     
+
+    
+    
+    
+   
 
     
 
