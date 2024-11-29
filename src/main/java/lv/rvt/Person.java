@@ -7,18 +7,18 @@ public class Person {
     private int height;
     
     public Person(String name) {
-        this.name = name;
-        this.age = 0;
-        this.weight = 0;
-        this.height = 0;
+        this(name, 0, 0, 0);
     }
     
-    public Person(String name, int age) {
+    
+    public Person(String name, int age, int height, int weight) {
         this.name = name;
         this.age = age;
-        this.weight = 0;
-        this.height = 0;
+        this.weight = weight;
+        this.height = height;
     }
+    
+    
 
     public void printPerson() {
         System.out.println(this.name + " is " + this.age + " years old");
@@ -48,10 +48,17 @@ public class Person {
         return this.name + " is " + this.age + " years old, their BMI is " + this.bodyMassIndex();
     }
 
-    public void setHeight(int height) {
-        this.height = height;
+    
+
+    
+    public void setHeight(int newHeight) {
+        this.height = newHeight;
     }
 
+    public int getAge() {
+        return this.age;
+    }
+    
     public int getHeight() {
         return this.height;
     }
@@ -60,13 +67,12 @@ public class Person {
         return this.weight;
     }
 
-    public void setWeight(int weight) {
-        this.weight = weight;
+    public void setWeight(int newWeight) {
+        this.weight = newWeight;
     }
 
     public String getName() {
         return this.name;
     }
 
-
-}
+}   
