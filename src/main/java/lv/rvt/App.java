@@ -8,12 +8,11 @@ public class App
 { 
   public static void main( String[] args ) throws Exception {
     Scanner scanner = new Scanner(System.in);
-    BufferedReader reader = Helper.getReader("Person.csv");
+    
+    Box box = new  Box( 2.5, 5.0, 6.0 ) ;
 
-   System.out.println(reader.readLine());
-   System.out.println(reader.readLine());
-   System.out.println(reader.readLine());
-
+    System.out.println( "Area: "  + box.area() + " volume: " + box. volume() );
+    System.out.println( "topArea: "  + box.topArea() );
   
   }
 }
