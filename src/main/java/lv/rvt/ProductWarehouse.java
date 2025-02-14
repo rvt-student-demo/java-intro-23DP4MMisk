@@ -15,6 +15,14 @@ public class ProductWarehouse extends Warehouse{
         return this.productName;
     }
     
+    public void setName(String newName){
+        this.productName = newName;
+    }
+
+    @Override
+    public String toString(){
+        return super.toString() + "\n " + this.productName + ": balance = " + super.getBalance() + ", space left " + super.howMuchSpaceLeft();
+    }
     
     
 }
