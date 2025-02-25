@@ -9,44 +9,29 @@ public class App
   public static void main( String[] args ) throws Exception {
     Scanner scanner = new Scanner(System.in);
    
-    List<Integer>Array = new ArrayList<>();
-    System.out.println("Ievadi skaitļus");
-    
-    while(true){
-     String input = scanner.nextLine();
-     if(input.isEmpty()) {
-      break;
-     }
-     try {
-      int number = Integer.parseInt(input);
-      Array.add(number);
-     } catch (NumberFormatException e) {
-      System.out.println("Lūdzu ievadi tikai veselus skaitļus");
-     }
-     
+   printChese(8);
+   
+
+  }
+
+  public static void printChese(int size){
+    String black = "\033[40m  \033[0m";
+    String green = "\033[42m  \033[0m";
+
+    for (int i = 0; i < size; i++){
+      for(int j = 0; j < size; j++){
+        if ((i + j) % 2 == 0){
+          System.out.print(black);
+        }else {
+          System.out.print(green);
+        }
+      }
+      System.out.println();
     }
-
-    Array.sort(Comparator.naturalOrder());
-    System.out.println("\nSakartots augoša secība:");
-    printTable(Array);
-
-    Array.sort(Comparator.reverseOrder());
-    System.out.println("\nSakartots dilstoša seciba:");
-    printTable(Array);
-
-    
 
   }
   
-  public static void printTable(List<Integer> Array){
-    System.out.println("=================");
-    System.out.println("| index | value |");
-    System.out.println("=================");
-    for(int i = 0; i < Array.size(); i++){
-      System.out.printf("| %5d | %5d |\n", i, Array.get(i));
-    }
-    System.out.println("=================");
-  }
+ 
 }
 
 
